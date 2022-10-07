@@ -1,0 +1,79 @@
+.transition{
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+
+}
+.transition:hover{
+    width: 300px;
+}
+
+.translating{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    animation: translating 1s ease-in 1s infinite;
+    
+}
+@keyframes translating {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(240px, 0);
+    }
+
+    50% {
+        transform: translate(240px, 140px);
+    }
+
+    75% {
+        transform: translate(0, 140px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 50px 100px;
+    grid-template-rows: 50px 50px;
+    grid-gap: 5px;
+    text-align: center;
+    justify-content: center;
+}
+
+.item{
+    background-color: aqua;
+    border: 1px solid gray;
+
+}
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.item3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.item4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+div p {  /* --> (div is the parent and the p is the child) */
+    color: blue;
+    font-family: 'Times New Roman';
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
